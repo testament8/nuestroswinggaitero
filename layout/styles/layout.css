@@ -1,0 +1,185 @@
+@import url("framework.css");
+
+/* BARRA SUPERIOR
+--------------------------------------------------------------------------------------------------------------- */
+#topbar{padding:15px 0; font-size:.8rem; text-transform:uppercase; text-align:center;}
+
+#topbar *{margin:0; padding:0; list-style:none;}
+#topbar ul li{display:inline-block; margin-right:10px; padding-right:15px; border-right:1px solid;}
+#topbar ul li:last-child{margin-right:0; padding-right:0; border-right:none;}
+#topbar i{margin:0 5px 0 0; line-height:normal;}
+#topbar a i{margin-right:0;}
+
+
+
+/* INTRO
+--------------------------------------------------------------------------------------------------------------- */
+#pageintro{padding:50px 0;}
+
+#pageintro article{display:block; max-width:75%; margin:0 auto; text-align:center;}
+#pageintro article *{word-wrap:break-word;}
+#pageintro .heading{margin-bottom:20px; font-size:3rem;}
+#pageintro p:first-of-type{display:block; max-width:75%; margin:0 auto 30px;}
+#pageintro footer{margin-top:80px;}
+
+
+
+/* Transition Fade
+This gives a smooth transition to "ALL" elements used in the layout - other than the navigation form used in mobile devices
+If you don't want it to fade all elements, you have to list the ones you want to be faded individually
+Delete it completely to stop fading
+--------------------------------------------------------------------------------------------------------------- */
+*, *::before, *::after{transition:all .28s ease-in-out;}
+#mainav form *{transition:none !important;}
+
+
+/* Navigation
+--------------------------------------------------------------------------------------------------------------- */
+nav ul, nav ol{margin:0; padding:0; list-style:none;}
+
+#mainav, #breadcrumb, .sidebar nav{line-height:normal;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
+
+/* Top Navigation */
+
+#mainav ul{text-transform:uppercase;}
+#mainav ul ul{z-index:9999; position:absolute; width:180px; text-transform:none;}
+#mainav ul ul ul{left:180px; top:0;}
+#mainav li{display:inline-block; position:relative; margin:0 15px 0 0; padding:0;}
+#mainav li:last-child{margin-right:0;}
+#mainav li li{width:100%; margin:0;}
+#mainav li a{display:block; padding:30px 0;}
+#mainav li li a{border:solid; border-width:0 0 1px 0;}
+#mainav .drop{padding-left:15px;}
+#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
+#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
+#mainav .drop::after{top:35px; left:5px;}
+#mainav li li .drop::after{top:15px; left:5px;}
+#mainav ul ul{visibility:hidden; opacity:0;}
+#mainav ul li:hover > ul{visibility:visible; opacity:1;}
+
+#mainav form{display:none; margin:0; padding:0;}
+#mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
+#mainav form select{width:100%; padding:5px; border:1px solid;}
+#mainav form select option{margin:5px; padding:0; border:none;}
+
+
+/* Back to Top */
+#backtotop{z-index:999; display:inline-block; position:fixed; visibility:hidden; bottom:20px; right:20px; width:36px; height:36px; line-height:36px; font-size:16px; text-align:center; opacity:.2;}
+#backtotop i{display:block; width:100%; height:100%; line-height:inherit;}
+#backtotop.visible{visibility:visible; opacity:.5;}
+#backtotop:hover{opacity:1;}
+
+
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+body{color:#FFFFFF; background-color:#000000; background-repeat: repeat;}
+a{color:#000000;}
+a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
+hr, .borderedbox{border-color:#F4F4F4;}
+label span{color:#FF0000; background-color:inherit;}
+input:focus, textarea:focus, *:required:focus{border-color:#F7AF9D;}
+
+.overlay{color:#FFFFFF; background-color:inherit;}
+.overlay::after{color:inherit; background-color:rgba(0,0,0,.6);}
+.overlay.light{color:#474747;}
+.overlay.light::after{background-color:rgba(255,255,255,.85);}
+
+
+/* Rows */
+.row0, .row0 a{color:#474747; background-color:#FFFFFF;}
+.row1{color:#FFFFFF;}
+.row1 + .row2{border-color:rgba(255,255,255,.2);}
+
+/* Top Bar */
+#topbar, #topbar ul li{border-color:rgba(255,255,255,.2);}
+#topbar > div:last-of-type li:first-child a{color:#9E4195;}
+
+
+/* Header */
+#header #logo a{color:inherit;}
+
+
+/* Page Intro */
+#pageintro li{color:#FFFFFF;}
+
+
+/* Navigation */
+#mainav li a{color:inherit;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#F7AF9D; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(0,0,0,.6); border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#F7AF9D;}
+#mainav form select{color:#FFFFFF; background-color:#000000; border-color:rgba(255,255,255,.3);}
+
+#breadcrumb a{color:inherit; background-color:inherit;}
+#breadcrumb li:last-child a{color:#F7AF9D;}
+
+.container .sidebar nav a{color:inherit; border-color:#F4F4F4;}
+.container .sidebar nav a:hover{color:#F7AF9D;}
+
+.pagination a, .pagination strong{border-color:#F4F4F4;}
+.pagination .current *{color:#FFFFFF; background-color:#F7AF9D;}
+
+#backtotop{color:#FFFFFF; background-color:#F7AF9D;}
+
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Media Queries
+--------------------------------------------------------------------------------------------------------------- */
+@-ms-viewport{width:device-width;}
+
+
+/* Max Wrapper Width - Laptop, Desktop etc.
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:978px){
+	.hoc{max-width:978px;}
+}
+
+
+/* Mobile Devices
+--------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width:750px){
+	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
+	.fl_left, .fl_right{display:block; float:none;}
+	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
+	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
+
+	#header{text-align:center;}
+	#header #logo{margin:0 0 15px 0;}
+
+	.sectiontitle{text-align:left;}
+
+	.logos + figcaption{text-align:left;}
+}
+
+
+@media screen and (max-width:450px){
+	.testimonials article{padding-left:0;}
+	.testimonials article img{position:relative; top:inherit; left:inherit; margin-bottom:20px;}
+}
+
+
+/* Other
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:650px){
+	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
+	.scrollable table{margin:0; padding:0; white-space:nowrap;}
+
+	.inline li{display:block; margin-bottom:10px;}
+	.pushright li{margin-right:0;}
+
+	.font-x2{font-size:1.4rem;}
+	.font-x3{font-size:1.6rem;}
+
+	#pageintro article, #pageintro p:first-of-type{max-width:none; width:100%;}
+	#pageintro .heading{font-size:1.6rem;}
+}
+
+
